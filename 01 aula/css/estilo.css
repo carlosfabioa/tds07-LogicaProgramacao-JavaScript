@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/*######## GERAL ##########*/
+body, a{
+    color: white;
+    margin:0;
+    font-family:"Open Sans",helvetica,arial,sans-serif;
+    font-size:18px;
+    line-height:1.6em;
+    font-weight:400;
+}
+
+*,::after,::before{
+    box-sizing:border-box}
+
+header a,dt,h1,h2,h3,h4,h5,h6{
+    font-family:Raleway,helvetica,arial,sans-serif}
+
+main{
+    overflow: hidden;
+}
+
+/*######## CONTAINERS#########*/
+.container{
+    margin-top:-90px;
+    padding:30px 0;
+    font-size:.8em;
+    text-align:center;
+    color:#fff;
+    margin-right:auto;
+    margin-left:auto;
+    padding-right:15px;
+    padding-left:15px;
+}
+
+/*######## SEPARADORES #########*/
+.separador-esquerda::before, .separador-direita::before{
+    width:150%;
+    height:100px;
+    background:#000;
+    top:0;
+    content:''}
+
+/* A ESQUERDA*/
+.separador-esquerda{
+    position:relative;}
+
+.separador-esquerda::before{
+    position:absolute;
+    left:0;
+    transform:rotate(-3deg);
+    transform-origin:top left;}
+
+/*A DIREITA*/
+.separador-direita{
+    position: relative;
+}
+
+.separador-direita::before{
+    position:absolute;
+    right:0;
+    -webkit-transform:rotate(3deg);
+    transform:rotate(3deg);
+    -webkit-transform-origin:top right;
+    transform-origin:top right;}
+
+
+
+/*########## CABEÇALHO ############*/
+header{
+    position: relative;
+    height: 100vh;
+    background: url(../images/homeoffice.jpg) center center no-repeat fixed;
+    background-size:cover
+}
+
+.mascara{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(../images/ponto.png) left top;    
+}
+
+header h1{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size:3em;
+    text-transform:lowercase;
+}
+
+
+header h1 strong{
+    color:#00bcd4;
+}
+
+header .seta{
+    position:absolute;
+    bottom:50px;
+    left:0;
+    right:0;
+    display:block;
+    width:auto;
+    margin:0 auto;
+}
+
+/*########## PORTIFOLIO ############*/
+section.portifolio{
+    min-height:120vh;
+    background:url(../images/portfolio-bg.jpg) center center no-repeat fixed #000;
+    background-size:cover}
+
+section.portifolio .container{
+    padding-top:150px;
+    padding-bottom:100px;
+    text-align: left;
+}
+
+section.portifolio ul{
+    padding:5px 20px;
+    list-style:none;
+    border-left:2px solid #F0A830}
+
+section.portifolio li{
+    padding:2px 0;
+    margin:0}
+
+section.portifolio li a{
+    z-index:0;
+    position:relative;
+    display:inline-block;
+    text-decoration:none;}
+
+section.portifolio li a::before{
+    transition:all .2s ease-in-out 0s;
+    content:'';
+    z-index:-1;
+    position:absolute;
+    top:-5px;
+    bottom:0;
+    left:-10px;
+    right:0;
+    width:0;
+    height:calc(100% + 10px);
+    background:#F0A830;}
+
+section.portifolio li a:hover::before{
+    transition:all .2s ease-in-out 0s;
+    width:calc(100% + 20px);}
+
+/*############# SOBRE  ####################*/
+section.sobre{
+    min-height:100vh;
+    background:url(../images/pattern-1la.png) bottom center no-repeat #00a8a8;
+    background-size:cover}
+
+section.sobre::before{
+        background:#00a8a8;}
+
+section.sobre .container{
+    padding-top:100px;
+    width: 40%;
+    margin-right: 2em;
+    padding-right: 2em;
+    text-align:right}
+
+/*###### CONHECIMENTO #######*/
+section.conhecimento{
+    min-height:100vh;
+    background:url(../images/pattern-2rb.png) bottom center no-repeat #d50075;
+    background-size:cover}
+
+section.conhecimento::before{
+        background:#d50075}
+
+section.conhecimento .container{
+    width: 40%;
+    padding-left: 3em;
+    margin-left: 2em;
+    padding-top:100px;
+    text-align:left}
+
+section.conhecimento ul{
+    padding:0;
+    overflow:hidden}
+
+section.conhecimento li{
+    float:left;
+    display:block;
+    list-style:none;
+    font-weight:400;
+    padding:5px 15px;
+    margin:0 15px 15px 0;
+    border-width:2px;
+    border-style:solid;
+    border-color:#fff;
+    color:#fff}
+
+section.conhecimento li.r1{
+    border-color:#fff;
+    color:#fff;
+    background-color:rgba(255,255,255,.2)}
+
+section.conhecimento li.r2{
+    border-color:rgba(255,255,255,.75);
+    color:rgba(255,255,255,.75);
+    font-size:.95em;}
+    
+section.conhecimento li.r3{
+    border-color:rgba(255,255,255,.5);
+    color:rgba(255,255,255,.5);
+    border-width:1px;
+    padding:6px 16px;
+    font-size:.95em}
+    
+
+/*######### FOOTER ############*/
+footer{background:0 0}
+
+footer .container{
+ 
+    padding:30px 0;
+    font-size:.8em;
+    text-align:center;
+    color:black}
