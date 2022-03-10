@@ -17,4 +17,4 @@ document.write("<p style='color:rgb(0,0,255)'> Texto inserido dentro de uma TAG<
 //operações matemáticas usando o método .write
 document.write(33 -3, "<br>"); // o <br> é uma tag html para quebrar a linha (vai para linha debaixo)
 document.write(33 / 10, "<br>"); // sinal de divisão /
-document.write(33 * 2); // sinal de multiplicação *
+document.write(33 * 2); // sinal de multiplicação  *
