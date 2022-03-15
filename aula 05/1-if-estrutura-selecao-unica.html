@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional de seleção única</title>
+    
+
+</head>
+<body>
+    
+
+    <script>
+        /*
+         * é a principal estrutura de decisão em programação
+         * verifica o resultado de um teste lógico
+         * 
+            SINTAXE:
+                if (condicao){
+                    bloco de código
+                }
+        */
+
+        let num1 = Number(prompt("Digite o primeiro número: "));
+        let num2 = Number(prompt("Digite o segundo número: "));
+        console.log(typeof(num1));
+        console.log(typeof(num2));
+        /**
+        //mostra o num1 como sendo o maior
+        if(num1 > num2){
+            alert(`O maior número é ${num1}`);
+        }
+
+        //mostra o num2 como sendo o maior
+        if (num2 > num1) alert(`O maior número é ${num2}`) 
+        if (num1 < num2) alert(`O maior número é ${num2}`) 
+        
+        //mostra num1 igual a num2
+        if(num1 == num2){
+           alert("Num1 é igual a num2");
+        }
+*/
+        if(num1 === num2){ //sempre usar o stritamente igual
+           alert("Num1 é igual a num2");
+        }
+
+    </script>
+</body>
+</html>
