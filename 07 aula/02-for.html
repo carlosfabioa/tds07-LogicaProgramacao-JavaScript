@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    /*
+        LAÇO FOR
+        * É utilizado quando sabemos o número de vezes que um bloco de código
+            deve ser repetido
+            SINTAXE
+                for(valor-inicial; condicao; incremento){
+                    bloco de código
+                }
+    */
+
+    /*
+        let num = []; //criando um vetor (array) vazio
+        for(let i = 1; i <= 5; i++){ //percorrendo o vetor e dando entrada nos valores
+            num[i] = Number(prompt("Entre com o numero: "))
+        }
+
+        for(let i = 1; i <= 5; i++){ //mostrando os elementos do vetor
+            document.write(num[i])
+        }
+ 
+    
+//mostrando os números de 1 a 100
+    for(let i = 1; i <= 100; i++){
+        document.write(i);
+    }
+*/
+//mostrando os númetos de 1 a 100, mas de 10 em 10
+    document.write(`<h1>Números entre 1 e 100 de 10 em 10</h1>`);
+    for(let i=0; i <=100; i+=10){
+        document.write(`${i} <br> `)
+    }
+    
+
+//mostrar somente os numeros pares menores que 100
+    document.write(`<h1>Números Pares</h1>`);
+    for(let i=0; i<=100; i+=2){
+        document.write(`${i} - `);
+
+    }
+
+//mostrar numeros iniciando em 100 e terminando em 1
+    document.write(`<h1>Números iniciando em 100 e terminando em 1</h1>`);
+    for(let i=100; i>=0; i--){
+        document.write(`${i} - `);
+
+    }
+
+
+
+
+
+
+     
+    </script>
+</body>
+</html>
