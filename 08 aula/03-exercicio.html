@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+        Apresentar os resultados de uma tabuada de um
+        número qualquer. Esta deverá ser impressa no seguinte formato:
+        Considerando como exemplo o fornecimento do número 2
+        2 x 1 = 2
+        2 x 2 = 4
+        2 x 3 = 6
+        ....
+        2 x 9 = 18
+        2 x 10 = 20
+        */
+        const tabuada = Number(prompt("Qual a tabuada: ")) //guardo na constante a tabuada escolhida
+               
+        for(let numero = 1; numero <=10; numero++){ //gerando os 10 numeros
+            let resultado = tabuada * numero;
+            document.write(`${tabuada} X ${numero} : ${resultado} <br>`);
+        }
+
+    </script>
+    
+</body>
+</html>

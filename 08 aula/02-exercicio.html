@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Apresentar o total da soma obtido dos cem
+        primeiros números inteiros (1+2+3+4....+98+99+100)
+        */
+        var soma = 0; //vou usar a variável para acumular o valor da soma
+        var soma1 = 0;
+
+        for(let i = 1; i <= 100; i++){
+            soma = soma + i; //neste momento soma vale 1
+            soma1 += i; //equivale a mesma operação matematica da linha acima
+        }
+
+        console.log(soma);
+        console.log(soma1);
+    
+
+    </script>
+</body>
+</html>
