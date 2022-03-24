@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    
+    <script>
+        /**Elaborar um programa que apresente no final o somatório dos valores pares existentes na faixa de 1 até 500*/
+        let soma = 0; //vai guardar o somatório dos valores
+        let contador = 1 //variável usada na condição do while
+
+        while(contador <= 500){
+            if(contador % 2 === 0){
+                soma = soma + contador;
+                
+            }
+            contador++;
+        }
+        document.write('A soma total dos numeros pares é: ',    soma, '<br>');
+
+    </script>
+
+</body>
+</html>
