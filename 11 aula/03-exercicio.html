@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        function fatorial(numero){ 
+            let fatorial = 1;
+            for(let i = 1; i <= numero; i++){
+                fatorial = fatorial * i;
+            }
+            return fatorial;
+        }
+
+        vetorA = [];
+        vetorB = [];
+
+        //pegar os 15 elementos
+        for(let i = 0; i < 15; i++){ 
+            vetorA[i] = Number(prompt("Entre com um numero: "));
+        }
+
+        //calcular o fatorial dos elementos
+        for(let i = 0; i < vetorA.length; i++){
+            vetorB[i] = fatorial(vetorA[i]);
+        }
+    
+        //mostro o resultado do fatorial 
+        for(let i=0; i < vetorB.length; i++){
+            console.log(vetorB[i]);
+        }   
+
+        
+
+
+        
+
+        
+    </script>
+    
+</body>
+</html>
