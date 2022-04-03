@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Faça um programa que leia um nome de usuario e a sua senha.
+    Mas, não aceite que a senha senha igual ao nome do usuario.
+    Mostre a mensagem que a senha não pode ser igual e peça para
+    inserir uma nova senha.
+
+    <script>
+        let usuario = prompt("Nome do usuario: ")
+        let senha = prompt("Senha: ")
+
+        while(usuario === senha){
+            confirm("Digite uma senha diferente do nome do usuario");
+            senha = prompt("Senha: ")
+        }
+
+
+    </script>
+</body>
+</html>

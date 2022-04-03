@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Faça um programa que peça 4 notas bimestrais e mostre a média
+    </p>
+
+    <script>
+//PRIMEIRA MANEIRA DE RESOLVER
+        /*
+
+        let nota1 = Number(prompt("Entre com a nota: "))
+        let nota2 = Number(prompt("Entre com a nota: "))
+        let nota3 = Number(prompt("Entre com a nota: "))
+        let nota4 = Number(prompt("Entre com a nota: "))
+
+        let media = (nota1 + nota2 + nota3 + nota4)/4
+
+        alert(media);
+    */
+
+//SEGUNDA MANEIRA DE RESOLVER
+        /*
+        //Entrada
+        let nota = []
+        soma = 0;
+        for(let i=0; i < 4; i++){
+            nota[i] = Number(prompt(`Entre com a ${i+1} nota: `))
+        }
+
+        //Processamento
+        for(let i = 0; i < nota.length; i++){
+            soma += nota[i]
+        }
+
+        let media = soma /4;
+
+        //Saída
+        alert(media);
+        */
+//TERCEIRA MANEIRA DE RESOLVER
+        let nota = []
+        soma = 0;
+        for(let i=0; i < 4; i++){
+            nota[i] = Number(prompt(`Entre com a ${i+1} nota: `))
+            soma += nota[i];
+        }
+        alert(soma/4);
+
+    </script>
+</body>
+</html>
