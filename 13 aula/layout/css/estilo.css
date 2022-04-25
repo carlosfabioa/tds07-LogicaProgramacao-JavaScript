@@ -1,0 +1,30 @@
+*{
+    margin:0;
+}
+
+body{
+    background: url(https://docentes.sesisenaipr.org.br/Corpore.Net/images/login/bg.jpg) no-repeat;
+}
+
+img{
+    width: 128px; /* width é a largura da imagem*/
+    height: 53px; /* height é a altura da imagem*/
+}
+
+header{
+    background-color:rgba(0, 74, 112, 0.60);
+    text-align: right;
+    padding-right: 130px;
+ 
+}
+
+article{
+    position: relative;
+    float: right;
+    margin-right: 200px;
+    margin-top: 200px;
+}
+
+form input, form label{
+    display: block;
+}
