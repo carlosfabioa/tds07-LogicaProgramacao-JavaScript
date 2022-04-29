@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="minhaDiv">
+        <h1>Alterar o fundo de todos os elementos p da div</h1>
+        <p>Este é meu primeiro elemento</p>
+        <p>Este é meu segundo elemento</p>
+        <p class="senai">Este é meu terceiro elemento</p>
+
+        <button onclick="alterarTodosElementos()">Clique Aqui</button>
+    </div>
+
+    <script>
+        function alterarTodosElementos(){
+            let elementos = document.getElementById("minhaDiv").querySelectorAll("p");
+            console.log(elementos);
+            for(let elemento of elementos){
+                elemento.style.backgroundColor = "red";
+            }
+        }
+    </script>
+    
+</body>
+</html>

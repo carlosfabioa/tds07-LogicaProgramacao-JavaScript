@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Método: addEventLister()</h1>
+    <ul>
+        <li>O método anexa um manipulador de eventos no elemento</li>
+        <li>SINTAXE:
+                element.addEventListener(Event, function, UserCapture)
+        </li>
+        <li>event (obrigatório)--> recebe um evento conforme site: </li>
+        <li>function (obrigatório)--> será executada quando o evento ocorrer</li>
+        <li>userCapture (opcional)--> false ou true</li>
+    </ul>
+
+<hr>
+
+<div id="minhaDiv">
+    <h2>O método addEventListener()</h2>
+    <p>Usando uma função declarada explicitamente</p>
+    <button id="botao">Clique em mim</button>
+
+    <p id="senai"></p>
+</div>
+<hr>
+<div id="minhaDiv1">
+    <h2>O método addEventListener()</h2>
+    <p>Usando uma função anonima</p>
+    <button id="botao1">Clique em mim</button>
+
+    <p id="senai1"></p>
+</div>
+
+<div id="minhaDiv2">
+    <h2>Multiplos eventos com o mesmo botão</h2>
+    <button id="botao2">Clique em mim</button>
+
+    <p id="senai2">  </p>
+</div>
+<hr>
+
+<div id="minhaDiv3">
+    <h2>Receber parâmetros na função</h2>
+    <button id="botao3"> Clique em mim</button>
+
+    <p id="senai3"></p>
+</div>
+
+
+
+<script>
+    let par1 = 10;
+    let par2 = 7;
+
+    document.getElementById("botao3").addEventListener("click", function(){
+        multiplicar(par1, par2);
+    })
+
+    function multiplicar(joaozinho, mariazinha){
+        document.getElementById("botao3").innerText = `${joaozinho} x ${mariazinha}`;
+        document.getElementById("senai3").innerHTML = `O resultado é ${joaozinho * mariazinha}`;
+    }
+
+
+    const botao2 = document.getElementById("botao2");
+    botao2.addEventListener("mouseover", passeMouse);
+    botao2.addEventListener("click", clicarMouse);
+    botao2.addEventListener("mouseout", retirarMouse);
+
+    function passeMouse(){
+        document.getElementById("senai2").innerHTML += "Coloquei o mouse <br>";
+    }
+    function clicarMouse(){
+        document.getElementById("senai2").innerHTML += "Cliquei no mouse <br>"
+    }
+    function retirarMouse(){
+        document.getElementById("senai2").innerHTML += "Retirei o mouse <br>"
+    }
+
+
+    const botao = document.getElementById("botao");
+    botao.addEventListener("click", clicarBotao);
+
+    function clicarBotao(){
+        document.getElementById("senai").innerHTML = "o botão foi clicado";
+        document.getElementById("senai").style.color = "blue";
+        document.getElementById("senai").style.fontSize = "40px"
+    }
+
+    const botao1 = document.querySelector("#botao1");
+    console.log(botao1)
+    botao1.addEventListener("click", function(){ /*usando uma função anônima*/
+        document.querySelector("#senai1").innerHTML = "o botão foi clicado novamente"
+    })
+
+</script>
+
+</body>
+</html>
