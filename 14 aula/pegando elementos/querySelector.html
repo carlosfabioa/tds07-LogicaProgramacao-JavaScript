@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>MÉTODO: querySelector()</h1>
+    <ul>
+        <li>retornar o primeiro elemento filho que combina com o seletor CSS de um elemento<br>
+            SITAXE: <br>
+            elemeto.querySelector("Seletor CSS");
+                    
+        </li>
+        <li>O seletor CSS é sempre uma String</li>
+        <li>É usado para selecionar elementos HTML (id, class, tipos, atributos, etc)</li>
+    </ul>
+
+    <hr>
+    <div id="minhaDiv">
+        <h1>Alterar o primeiro elemento p da Div</h1>
+        <p>Este é o primeiro elemento na minha div</p>
+        <p>Este é o segundo elemento na minha div</p>
+
+        <button onclick="alterarElemento()">Clique aqui</button>
+    </div>
+
+
+    <script>
+        function alterarElemento(){
+            var elemento = document.getElementById('minhaDiv');
+            elemento.querySelector("p").innerHTML = "olá mundo";
+            elemento.querySelector("p").style.color = 'yellow';
+        }
+    </script>
+    
+</body>
+</html>
