@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" id="formulario">
+        <label for="nome">Nome: </label>
+        <input type="text">
+
+        <button id="botao" onclick="pegarInput()">Clique aqui</button>
+    </form>
+
+
+    <script>
+        let formulario = document.querySelector("#formulario");
+        
+
+        function pegarInput(){
+            let input = formulario.querySelector("input").value;
+            document.write(input)
+        }
+        
+
+    </script>
+    
+</body>
+</html>

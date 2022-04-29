@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, form label, form input, form button{
+            display: block;
+            position: relative;
+            left: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form id="formulario">
+        <label for="primeroNumero">Primeiro Número: </label>
+        <input type="text" id="primeiroNumero">
+        <label for="segundoNumero" >Segundo Número: </label>
+        <input type="text" id="segundoNumero">
+        <label id="resultado">Resultado: </label>
+
+        <button type="submit">Somar dois números</button>
+
+        <label id="resultado">Resultado: </label>
+        <button type="submit">Multiplicar dois números</button>
+    </form>
+
+
+    <script>
+        const formulario = document.getElementById("formulario"); 
+
+        formulario.addEventListener('submit', function(e){//"e" é um evento que está sendo capturado
+            e.preventDefault(); //altera o comportamento padrão do nosso formulário
+            const inputPrimeiroNumero = e.target.querySelector("#primeiroNumero"); //pegando o input
+            const inputSegundoNumero = e.target.querySelector("#segundoNumero");
+
+            const primeiroNumero = Number(inputPrimeiroNumero.value); //pegando o valor digitado dentro do  input
+            const segundoNumero = Number(inputSegundoNumero.value);
+
+            var resultado = somar(primeiroNumero, segundoNumero);
+
+            var resultado = multiplicar(primeiroNumero, segundoNumero);
+
+            const paragrafo = document.createElement("p"); //criando um elemento "p" no HTML
+            document.getElementById("resultado").appendChild(paragrafo).innerHTML = resultado;
+
+
+        });
+
+        function somar(a, b){
+            let resultado = a + b;
+            return resultado;
+        }
+
+        function multiplicar(a,b){
+            let resultado = a* b;
+            return resultado;
+        }
+
+        
+    </script>
+
+</body>
+</html>
